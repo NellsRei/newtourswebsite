@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 50px;
+    color: black;
+    font-size: larger;
+    text-align: center;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    height: 10vh;
+}
+.navs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+}
+.header.scrolled{
+    padding: 20px 25px;
+    background-color: white;
+    color: black;
+    width: 100vw;
+}
+.logo a {
+    color: black;
+    word-spacing: 10px;
+    font-size: xx-large;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.header a, .logo a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    text-align: left;
+}
+
+.navs a:hover {
+    color: black;
+    text-decoration: underline;
+}
+section {
+    padding: 20px;
+    font-size: larger;
+    box-sizing: border-box;
+    background-image: url("./img/valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    margin-bottom: 2rem;
+}
+.usercont, .tourscont, .hotelscont, .bookingscont, .userscont{
+    /* background-color: #f5f5f5; */
+    height: 85vh;
+    padding: 20px;
+    margin-top: 60px;
+}
+.btns{
+    padding-top: 10px;
+}
+.btns button, .admintouradd button{
+    padding: 20px;
+    gap: 20px;
+    float: right;
+    margin-left: 10px;
+}
+.userdel{
+    background-color: red;
+}
+.userup{
+    background-color: blue;
+    color: white;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin-top: 10rem;
+    padding-top: 10px;
+    height: 40%;
+
+}
+
+.tourcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tours {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.tours img {
+    width: 300px; 
+    height: 200px;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.tours p {
+    margin-bottom: 10px;
+}

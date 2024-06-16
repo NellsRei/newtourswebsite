@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="accstyle.css">
+    <script src="./dist/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="home.html">VoyageVista</a>
+        </div>
+        <div class="navs">
+            <p class="username" style="display: none;">Username</p>
+            <a href="#userinfo">Info</a>
+            <a href="#tours">Tours</a>
+            <a href="#hotels">Hotels</a>
+            <a href="#bookings">Bookings</a>
+            <a href="#users">Users</a>
+            
+        </div>
+    </header>
+    <section class="userinfo" id="userinfo">
+        <div class="usercont">
+            <div class="btns">
+                <button class="userup">Update Credentials</button>
+                <button class="userdel">Delete Account</button>
+            </div>
+            <div class="info">
+                <h1>ACCOUNT PAGE</h1>
+                <p>Username: user123</p>
+                <p>Email: user@example.com</p>
+                <p>Password: *******</p>
+                <p class="status">Status:User</p>
+            </div>
+        </div>
+    </section>
+    <section class="tours" id="tours">
+        <div class="tourscont">
+            <div class="admintouradd">
+                <button>Add a tour</button>
+            </div>
+            <div class="tourcard">
+
+            </div>
+        </div>
+    </section>
+    <section class="hotels" id="hotels">
+        <div class="hotelscont">
+            <div class="hotelinfo">
+                <p>Hotel 1: Hotel Description</p>
+                <p>Hotel 2: Hotel Description</p>
+            </div>
+        </div>
+    </section>
+    <section class="bookings" id="bookings">
+        <div class="bookingscont">
+            <div class="bookinginfo">
+                <p>Booking 1: Booking Description</p>
+                <p>Booking 2: Booking Description</p>
+            </div>
+        </div>
+    </section>
+    <section class="users" id="users">
+        <div class="userscont">
+            <div class="userinfo">
+                <p>User 1: User Description</p>
+                <p>User 2: User Description</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
