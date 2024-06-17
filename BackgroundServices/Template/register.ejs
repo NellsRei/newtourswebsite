@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            color: #333333;
+        }
+        .content {
+            padding: 20px;
+            color: #555555;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #333333;
+        }
+        .content p {
+            margin: 0 0 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #999999;
+            font-size: 14px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VoyageVista</h1>
+        </div>
+        <div class="content">
+            <h2>Welcome to Voyage Vista,<%=name%>, Explore The World With Ease</h2>
+            <p>
+                Thankyou for creating an account. Be ready to explore and book tours all aroung the world
+            </p>
+            <p>
+               <!-- should hold the content for the booking -->
+            </p>
+            <p>
+                If you have any questions or need further assistance, please do not hesitate to contact us.
+            </p>
+            <a href="[Call to Action URL]" class="button">Call to Action</a>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 VoyageVista. All rights reserved.</p>
+            <p>
+                Company Address<br>
+                Phone: (123) 456-7890<br>
+                Email: support@company.com
+            </p>
+        </div>
+    </div>
+</body>
+</html>

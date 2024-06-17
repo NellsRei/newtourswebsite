@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            color: #333333;
+        }
+        .content {
+            padding: 20px;
+            color: #555555;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #333333;
+        }
+        .content p {
+            margin: 0 0 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #999999;
+            font-size: 14px;
+        }
+        .details {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .details th, .details td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        .details th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Booking Confirmation</h1>
+        </div>
+        <div class="content">
+            <h2>Hello,<%=username%></h2>
+            <p>Thank you for booking with us! Here are the details of your booking:</p>
+            <table class="details">
+                <tr>
+                    <th>Booking ID</th>
+                    <td><%=bookingid%></td>
+                </tr>
+                <tr>
+                    <th>Tour Name</th>
+                    <td><%=tourname%></td>
+                </tr>
+                <tr>
+                    <th>Hotel Name</th>
+                    <td><%=hotelname%></td>
+                </tr>
+                <tr>
+                    <th>Booking Date</th>
+                    <td><%=bookingdate%></td>
+                </tr>
+            </table>
+            <p>We look forward to providing you with an unforgettable experience.</p>
+            <p>If you have any questions or need further assistance, please do not hesitate to contact us.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Voyage Vista. All rights reserved.</p>
+            <p>
+                Voyage Vista, 123 Travel Road, Wanderlust City, WL 45678<br>
+                Phone: (123) 456-7890<br>
+                Email: support@voyagevista.com
+            </p>
+        </div>
+    </div>
+</body>
+</html>

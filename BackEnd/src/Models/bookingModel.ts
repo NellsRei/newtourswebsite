@@ -1,7 +1,8 @@
 export interface Booking{
-    id:string,
+    bookingid:string,
     userid:string,
     tourid:string,
     hotelid:string,
-    bookingdate:Date
+    bookingdate:string,
+    IsEmailSent: number
 }

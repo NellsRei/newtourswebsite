@@ -1,5 +1,5 @@
 import { ConnectionPool, Request} from "mssql";
-import { sqlConfig } from "../Config";
+import { sqlConfig } from "../config";
 import mssql from "mssql"
 
 export class DbHelper{
@@ -8,14 +8,12 @@ export class DbHelper{
     constructor(){
         this.pool = mssql.connect(sqlConfig)
     }
-    
-    
 
-    async exec(StoredProcedures:string, data:{[x:string] :string | number}){
+    async exec(StoredProcedure:string, data:{[x:string] :string | number}){
     //make a request
     const emptyRequest =(await this.pool).request()
     const request = this.createRequest(emptyRequest,data)
-    let result  = await request.execute(StoredProcedures)
+    let result  = await request.execute(StoredProcedure)
 
     return result
     }

@@ -1,6 +1,6 @@
 export interface Tour{
     tourid:string,
-    name:string,
+    tourname:string,
     destination:string,
     description:string,
     price:string

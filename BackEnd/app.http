@@ -10,4 +10,101 @@ Content-Type: application/json
 }
 
 ###########
-GET http://localhost:3005/user/register
+POST http://localhost:3005/user/login
+Content-Type: application/json
+
+{
+   "Email":"nelly@admin.com",
+    "Password": "Hello@trial1"
+}
+
+
+##########
+POST http://localhost:3005/tour
+Content-Type: application/json
+
+{
+    "tourname": "Eiffel Tour",
+    "destination":"Paris",
+    "description": "Visit the city of love",
+    "price": 3000
+
+}
+
+
+##########
+GET http://localhost:3005/tour
+
+
+
+#########
+GET http://localhost:3005/tour/2348204c-2b8e-44cf-a3e2-39e023b8e9b0
+
+
+
+
+#########
+PATCH  http://localhost:3005/tour/a6629b11-6737-4263-bf7d-a3c8860fc8d0
+Content-Type: application/json
+
+{
+    "tourname": "Paris Eiffel Tower Tour",
+    "destination":"Paris",
+    "description": "Visit the city of love",
+    "price": 900000
+
+}
+
+
+###########
+DELETE   http://localhost:3005/tour/fd8dca4e-442d-42ae-aee0-ecb8adf3574d
+
+
+
+##########
+POST http://localhost:3005/hotel
+Content-Type: application/json
+
+{
+    "hotelname": "Green Hill Hotel",
+    "location":"Kenya",
+    "rating": 4,
+    "tourid": "18345927-65c6-4075-aaff-a5959fb93623"
+
+}
+
+#########
+GET http://localhost:3005/hotel
+
+
+########
+GET http://localhost:3005/hotel/6cb9fa29-e870-4411-a96d-e112fe02f136
+
+
+
+####
+PATCH  http://localhost:3005/hotel/14f3bb77-1487-4218-8625-bb332e0082c6
+Content-Type: application/json
+
+{
+    "hotelname": "Green Hills Hotel",
+    "location":"Kenya",
+    "rating": 4,
+    "tourid": "18345927-65c6-4075-aaff-a5959fb93623"
+
+}
+
+
+###########
+DELETE http://localhost:3005/hotel/14f3bb77-1487-4218-8625-bb332e0082c6
+
+
+
+
+##########
+GET http://localhost:3005/hotel/T/18345927-65c6-4075-aaff-a5959fb93623
+
+
+
+#########3
+GET http://localhost:3005/booking/195e9120-30ec-4010-bb4a-273772df9be9

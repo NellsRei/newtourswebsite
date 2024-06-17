@@ -1,0 +1,8 @@
+Use bookingSystem;
+GO
+CREATE OR ALTER PROCEDURE getAllTours
+AS 
+BEGIN
+    SELECT * FROM tour
+END
+GO
