@@ -48,7 +48,7 @@ PATCH  http://localhost:3005/tour/a6629b11-6737-4263-bf7d-a3c8860fc8d0
 Content-Type: application/json
 
 {
-    "tourname": "Paris Eiffel Tower Tour",
+    "tourname": "Paris Eiffel Tower Tour 12",
     "destination":"Paris",
     "description": "Visit the city of love",
     "price": 900000
@@ -66,9 +66,9 @@ POST http://localhost:3005/hotel
 Content-Type: application/json
 
 {
-    "hotelname": "Green Hill Hotel",
-    "location":"Kenya",
-    "rating": 4,
+    "hotelname": "Diani Reef Beach Resort & Spa",
+    "location":"Diani Beach",
+    "rating": 5,
     "tourid": "18345927-65c6-4075-aaff-a5959fb93623"
 
 }

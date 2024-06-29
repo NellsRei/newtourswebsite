@@ -4,11 +4,13 @@ import tourRoutes from "./Routes/tourRoutes";
 import hotelRoutes from "./Routes/hotelRoutes";
 import bookingRoutes from "./Routes/bookingRoute";
 import userRoutes from "./Routes/userRoute";
+import cors from "cors"
 
 
 const app = express()
 
 //middleware
+app.use(cors())
 app.use(json())
 
 app.use("/user", authRouter)
@@ -24,3 +26,4 @@ app.listen(3005, ()=>{
     console.log('Server Running....');
     
 })
+

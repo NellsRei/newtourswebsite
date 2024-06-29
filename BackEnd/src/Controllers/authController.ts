@@ -66,7 +66,7 @@ export const loginUser = async (req:Request, res:Response)=>{
                         {expiresIn:'2h'}
                     )
 
-                    return res.status(201).json({Message:"Login Successfull!!!",token})
+                    return res.status(201).json({Message:"Login Successfull!!!",token , role:user[0].role,username:user[0].username ,id:user[0].userid })
                 }
                 return res.status(400).json({Message:"Incorrect Credentials!!!"})
                             }
