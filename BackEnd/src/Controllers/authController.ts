@@ -11,12 +11,15 @@ import jwt from "jsonwebtoken"
 
 const dbInstance = new DbHelper()
 
+
+//function that assigns a role to users based on email
 export function assignRoleBasedOnEmail(email: string): string {
     if (email.endsWith('@admin.com')) {
-      return 'admin';
+      return 'admin'
     }
-    return 'user';
+    return 'user'
 }
+//function that registers a new user
 export async function registerUser(req:Request, res:Response){
     try {
         const userid = uid()
@@ -28,10 +31,10 @@ export async function registerUser(req:Request, res:Response){
             return res.status(400).json(error.details[0].message)
         }
         // Automatically assign role based on email
-        const role = assignRoleBasedOnEmail(Email);
+        const role = assignRoleBasedOnEmail(Email)
 
         // Hashes the password
-        const hashedPassword = await Bycrypt.hash(Password,10);
+        const hashedPassword = await Bycrypt.hash(Password,10)
         // console.log(hashedPassword,role)
         dbInstance.exec('addUser',{userid,username,Email,hashedPassword,role})
         res.status(200).json({Message: "User Added Successfully"})
@@ -39,7 +42,7 @@ export async function registerUser(req:Request, res:Response){
         res.status(500).json(error)    
     }
 }
-
+//function to log in a registered user
 export const loginUser = async (req:Request, res:Response)=>{
     try {
         const {Email,Password}=req.body
@@ -49,11 +52,14 @@ export const loginUser = async (req:Request, res:Response)=>{
         const user = result.recordset as User[]
         // console.log(user)
         // res.status(200).json(user)
+
+        //to prevent deleted users from accessing the website
         if(user[0].isDeleted === 1){
             return res.status(404).json({Message:"User doesn't exist.Sign in"})
         }
+        //for users with an account
         if(user.length > 0){
-            //validate password
+            //compares the passwords
             const isValid = await Bycrypt.compare(Password, user[0].Password)
                 if(isValid){
                     const payload:Payload ={

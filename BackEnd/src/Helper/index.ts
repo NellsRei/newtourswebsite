@@ -8,3 +8,6 @@ export const RegisterSchema = Joi.object(
             new RegExp ('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
     )}
 )
+
+
+//validation for username, email and passwords that the user creates
