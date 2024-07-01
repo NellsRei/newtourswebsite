@@ -10,7 +10,7 @@ import cors from "cors"
 const app = express()
 
 //middleware
-app.use(cors())
+app.use(cors())    //for the angular frontend
 app.use(json())
 
 app.use("/user", authRouter)
